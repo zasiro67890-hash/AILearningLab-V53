@@ -1,7 +1,7 @@
 import os
 
 from fastapi import FastAPI, HTTPException, Request
-from agent import BrainHub
+from brain.agent import BrainHub
 
 app = FastAPI(title="V53 Secure Autonomous MindMesh")
 
