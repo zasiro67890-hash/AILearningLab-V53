@@ -1,0 +1,29 @@
+services:
+  - type: worker
+    name: v55-chromium-test-oh
+    runtime: docker
+    region: ohio
+    plan: 1c-2g
+    numInstances: 1
+    dockerfilePath: ./Dockerfile.v55-render
+    envVars:
+      - key: BRAIN_URL
+        value: https://ailearninglab-v53.onrender.com
+
+      - key: WORKER_REGION
+        value: OH
+
+      - key: TRAIN_STEPS
+        value: "10000"
+
+      - key: CHROMIUM_HEADLESS
+        value: "1"
+
+      - key: RUN_ONE_SESSION
+        value: "1"
+
+      - key: BRAIN_RELAY_URL
+        value: https://v53-oh-relay.onrender.com
+
+      - key: BRAIN_RELAY_API_KEY
+        sync: false

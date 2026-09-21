@@ -1,0 +1,221 @@
+services:
+  - type: worker
+    name: v55-chromium-us01
+    runtime: docker
+    region: virginia
+    plan: 1c-2g
+    numInstances: 100
+    dockerfilePath: ./Dockerfile.v55-render
+    envVars:
+      - key: BRAIN_URL
+        value: https://ailearninglab-v53.onrender.com
+      - key: WORKER_REGION
+        value: US
+      - key: TRAIN_STEPS
+        value: "10000"
+      - key: CHROMIUM_HEADLESS
+        value: "1"
+      - key: RUN_ONE_SESSION
+        value: "0"
+      - key: BRAIN_RELAY_URL
+        value: https://v53-us-relay.onrender.com
+      - key: BRAIN_RELAY_API_KEY
+        sync: false
+  - type: worker
+    name: v55-chromium-us02
+    runtime: docker
+    region: virginia
+    plan: 1c-2g
+    numInstances: 100
+    dockerfilePath: ./Dockerfile.v55-render
+    envVars:
+      - key: BRAIN_URL
+        value: https://ailearninglab-v53.onrender.com
+      - key: WORKER_REGION
+        value: US
+      - key: TRAIN_STEPS
+        value: "10000"
+      - key: CHROMIUM_HEADLESS
+        value: "1"
+      - key: RUN_ONE_SESSION
+        value: "0"
+      - key: BRAIN_RELAY_URL
+        value: https://v53-us-relay.onrender.com
+      - key: BRAIN_RELAY_API_KEY
+        sync: false
+  - type: worker
+    name: v55-chromium-oh01
+    runtime: docker
+    region: ohio
+    plan: 1c-2g
+    numInstances: 100
+    dockerfilePath: ./Dockerfile.v55-render
+    envVars:
+      - key: BRAIN_URL
+        value: https://ailearninglab-v53.onrender.com
+      - key: WORKER_REGION
+        value: OH
+      - key: TRAIN_STEPS
+        value: "10000"
+      - key: CHROMIUM_HEADLESS
+        value: "1"
+      - key: RUN_ONE_SESSION
+        value: "0"
+      - key: BRAIN_RELAY_URL
+        value: https://v53-oh-relay.onrender.com
+      - key: BRAIN_RELAY_API_KEY
+        sync: false
+  - type: worker
+    name: v55-chromium-oh02
+    runtime: docker
+    region: ohio
+    plan: 1c-2g
+    numInstances: 100
+    dockerfilePath: ./Dockerfile.v55-render
+    envVars:
+      - key: BRAIN_URL
+        value: https://ailearninglab-v53.onrender.com
+      - key: WORKER_REGION
+        value: OH
+      - key: TRAIN_STEPS
+        value: "10000"
+      - key: CHROMIUM_HEADLESS
+        value: "1"
+      - key: RUN_ONE_SESSION
+        value: "0"
+      - key: BRAIN_RELAY_URL
+        value: https://v53-oh-relay.onrender.com
+      - key: BRAIN_RELAY_API_KEY
+        sync: false
+  - type: worker
+    name: v55-chromium-eu01
+    runtime: docker
+    region: frankfurt
+    plan: 1c-2g
+    numInstances: 100
+    dockerfilePath: ./Dockerfile.v55-render
+    envVars:
+      - key: BRAIN_URL
+        value: https://ailearninglab-v53.onrender.com
+      - key: WORKER_REGION
+        value: EU
+      - key: TRAIN_STEPS
+        value: "10000"
+      - key: CHROMIUM_HEADLESS
+        value: "1"
+      - key: RUN_ONE_SESSION
+        value: "0"
+      - key: BRAIN_RELAY_URL
+        value: https://v53-gb-relay.onrender.com
+      - key: BRAIN_RELAY_API_KEY
+        sync: false
+  - type: worker
+    name: v55-chromium-eu02
+    runtime: docker
+    region: frankfurt
+    plan: 1c-2g
+    numInstances: 100
+    dockerfilePath: ./Dockerfile.v55-render
+    envVars:
+      - key: BRAIN_URL
+        value: https://ailearninglab-v53.onrender.com
+      - key: WORKER_REGION
+        value: EU
+      - key: TRAIN_STEPS
+        value: "10000"
+      - key: CHROMIUM_HEADLESS
+        value: "1"
+      - key: RUN_ONE_SESSION
+        value: "0"
+      - key: BRAIN_RELAY_URL
+        value: https://v53-gb-relay.onrender.com
+      - key: BRAIN_RELAY_API_KEY
+        sync: false
+  - type: worker
+    name: v55-chromium-sg01
+    runtime: docker
+    region: singapore
+    plan: 1c-2g
+    numInstances: 100
+    dockerfilePath: ./Dockerfile.v55-render
+    envVars:
+      - key: BRAIN_URL
+        value: https://ailearninglab-v53.onrender.com
+      - key: WORKER_REGION
+        value: SG
+      - key: TRAIN_STEPS
+        value: "10000"
+      - key: CHROMIUM_HEADLESS
+        value: "1"
+      - key: RUN_ONE_SESSION
+        value: "0"
+      - key: BRAIN_RELAY_URL
+        value: https://ailearninglab-v53-1.onrender.com
+      - key: BRAIN_RELAY_API_KEY
+        sync: false
+  - type: worker
+    name: v55-chromium-sg02
+    runtime: docker
+    region: singapore
+    plan: 1c-2g
+    numInstances: 100
+    dockerfilePath: ./Dockerfile.v55-render
+    envVars:
+      - key: BRAIN_URL
+        value: https://ailearninglab-v53.onrender.com
+      - key: WORKER_REGION
+        value: SG
+      - key: TRAIN_STEPS
+        value: "10000"
+      - key: CHROMIUM_HEADLESS
+        value: "1"
+      - key: RUN_ONE_SESSION
+        value: "0"
+      - key: BRAIN_RELAY_URL
+        value: https://ailearninglab-v53-1.onrender.com
+      - key: BRAIN_RELAY_API_KEY
+        sync: false
+  - type: worker
+    name: v55-chromium-or01
+    runtime: docker
+    region: oregon
+    plan: 1c-2g
+    numInstances: 100
+    dockerfilePath: ./Dockerfile.v55-render
+    envVars:
+      - key: BRAIN_URL
+        value: https://ailearninglab-v53.onrender.com
+      - key: WORKER_REGION
+        value: OR
+      - key: TRAIN_STEPS
+        value: "10000"
+      - key: CHROMIUM_HEADLESS
+        value: "1"
+      - key: RUN_ONE_SESSION
+        value: "0"
+      - key: BRAIN_RELAY_URL
+        value: https://ailearninglab-v53-2.onrender.com
+      - key: BRAIN_RELAY_API_KEY
+        sync: false
+  - type: worker
+    name: v55-chromium-or02
+    runtime: docker
+    region: oregon
+    plan: 1c-2g
+    numInstances: 100
+    dockerfilePath: ./Dockerfile.v55-render
+    envVars:
+      - key: BRAIN_URL
+        value: https://ailearninglab-v53.onrender.com
+      - key: WORKER_REGION
+        value: OR
+      - key: TRAIN_STEPS
+        value: "10000"
+      - key: CHROMIUM_HEADLESS
+        value: "1"
+      - key: RUN_ONE_SESSION
+        value: "0"
+      - key: BRAIN_RELAY_URL
+        value: https://ailearninglab-v53-2.onrender.com
+      - key: BRAIN_RELAY_API_KEY
+        sync: false

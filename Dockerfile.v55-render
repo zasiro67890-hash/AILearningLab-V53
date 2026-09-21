@@ -1,0 +1,15 @@
+FROM mcr.microsoft.com/playwright/python:v1.57.0-noble
+
+WORKDIR /app
+
+COPY requirements.v55-render.txt /app/requirements.v55-render.txt
+RUN pip install --no-cache-dir -r /app/requirements.v55-render.txt
+
+COPY agent_v55_10k_render.py /app/agent_v55_10k_render.py
+
+ENV PYTHONUNBUFFERED=1 \
+    TRAIN_STEPS=10000 \
+    CHROMIUM_HEADLESS=1 \
+    RUN_ONE_SESSION=0
+
+CMD ["python", "/app/agent_v55_10k_render.py"]
